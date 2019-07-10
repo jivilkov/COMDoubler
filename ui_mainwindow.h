@@ -264,7 +264,7 @@ public:
         label->setText(QApplication::translate("MainWindow", "Number", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "Data bits", nullptr));
         buttonIN->setText(QApplication::translate("MainWindow", "Connect", nullptr));
-        groupBox_3->setTitle(QApplication::translate("MainWindow", "Delay (ms)", nullptr));
+        groupBox_3->setTitle(QApplication::translate("MainWindow", "Delay (sec)", nullptr));
         groupBox_2->setTitle(QApplication::translate("MainWindow", "OUT", nullptr));
         label_8->setText(QApplication::translate("MainWindow", "Baud rate", nullptr));
         label_9->setText(QApplication::translate("MainWindow", "Data bits", nullptr));

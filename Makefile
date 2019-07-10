@@ -211,6 +211,7 @@ DIST          = /opt/qt5/5.12/mkspecs/features/spec_pre.prf \
 		/opt/qt5/5.12/mkspecs/features/qt_config.prf \
 		/opt/qt5/5.12/mkspecs/linux-g++/qmake.conf \
 		/opt/qt5/5.12/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/opt/qt5/5.12/mkspecs/features/exclusive_builds.prf \
 		/opt/qt5/5.12/mkspecs/features/toolchain.prf \
 		/opt/qt5/5.12/mkspecs/features/default_pre.prf \
@@ -399,6 +400,7 @@ Makefile: COMDoubler.pro /opt/qt5/5.12/mkspecs/linux-g++/qmake.conf /opt/qt5/5.1
 		/opt/qt5/5.12/mkspecs/features/qt_config.prf \
 		/opt/qt5/5.12/mkspecs/linux-g++/qmake.conf \
 		/opt/qt5/5.12/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/opt/qt5/5.12/mkspecs/features/exclusive_builds.prf \
 		/opt/qt5/5.12/mkspecs/features/toolchain.prf \
 		/opt/qt5/5.12/mkspecs/features/default_pre.prf \
@@ -580,6 +582,7 @@ Makefile: COMDoubler.pro /opt/qt5/5.12/mkspecs/linux-g++/qmake.conf /opt/qt5/5.1
 /opt/qt5/5.12/mkspecs/features/qt_config.prf:
 /opt/qt5/5.12/mkspecs/linux-g++/qmake.conf:
 /opt/qt5/5.12/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /opt/qt5/5.12/mkspecs/features/exclusive_builds.prf:
 /opt/qt5/5.12/mkspecs/features/toolchain.prf:
 /opt/qt5/5.12/mkspecs/features/default_pre.prf:
@@ -765,9 +768,25 @@ moc_mainwindow.cpp: /opt/qt5/5.12/include/QtWidgets/QMainWindow \
 		/opt/qt5/5.12/include/QtSerialPort/QSerialPort \
 		/opt/qt5/5.12/include/QtSerialPort/qserialport.h \
 		/opt/qt5/5.12/include/QtSerialPort/qserialportglobal.h \
+		/opt/qt5/5.12/include/QtSerialPort/QSerialPortInfo \
+		/opt/qt5/5.12/include/QtSerialPort/qserialportinfo.h \
 		/opt/qt5/5.12/include/QtWidgets/QMessageBox \
 		/opt/qt5/5.12/include/QtWidgets/qmessagebox.h \
 		/opt/qt5/5.12/include/QtWidgets/qdialog.h \
+		/opt/qt5/5.12/include/QtWidgets/QComboBox \
+		/opt/qt5/5.12/include/QtWidgets/qcombobox.h \
+		/opt/qt5/5.12/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/qt5/5.12/include/QtWidgets/qstyleoption.h \
+		/opt/qt5/5.12/include/QtWidgets/qabstractspinbox.h \
+		/opt/qt5/5.12/include/QtGui/qvalidator.h \
+		/opt/qt5/5.12/include/QtCore/qregularexpression.h \
+		/opt/qt5/5.12/include/QtWidgets/qslider.h \
+		/opt/qt5/5.12/include/QtWidgets/qabstractslider.h \
+		/opt/qt5/5.12/include/QtWidgets/qstyle.h \
+		/opt/qt5/5.12/include/QtWidgets/qtabbar.h \
+		/opt/qt5/5.12/include/QtWidgets/qrubberband.h \
+		/opt/qt5/5.12/include/QtWidgets/qframe.h \
+		/opt/qt5/5.12/include/QtCore/qabstractitemmodel.h \
 		/opt/qt5/5.12/include/QtCore/QTimer \
 		/opt/qt5/5.12/include/QtCore/qtimer.h \
 		/opt/qt5/5.12/include/QtCore/qbasictimer.h \
@@ -907,9 +926,25 @@ main.o: main.cpp mainwindow.h \
 		/opt/qt5/5.12/include/QtSerialPort/QSerialPort \
 		/opt/qt5/5.12/include/QtSerialPort/qserialport.h \
 		/opt/qt5/5.12/include/QtSerialPort/qserialportglobal.h \
+		/opt/qt5/5.12/include/QtSerialPort/QSerialPortInfo \
+		/opt/qt5/5.12/include/QtSerialPort/qserialportinfo.h \
 		/opt/qt5/5.12/include/QtWidgets/QMessageBox \
 		/opt/qt5/5.12/include/QtWidgets/qmessagebox.h \
 		/opt/qt5/5.12/include/QtWidgets/qdialog.h \
+		/opt/qt5/5.12/include/QtWidgets/QComboBox \
+		/opt/qt5/5.12/include/QtWidgets/qcombobox.h \
+		/opt/qt5/5.12/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/qt5/5.12/include/QtWidgets/qstyleoption.h \
+		/opt/qt5/5.12/include/QtWidgets/qabstractspinbox.h \
+		/opt/qt5/5.12/include/QtGui/qvalidator.h \
+		/opt/qt5/5.12/include/QtCore/qregularexpression.h \
+		/opt/qt5/5.12/include/QtWidgets/qslider.h \
+		/opt/qt5/5.12/include/QtWidgets/qabstractslider.h \
+		/opt/qt5/5.12/include/QtWidgets/qstyle.h \
+		/opt/qt5/5.12/include/QtWidgets/qtabbar.h \
+		/opt/qt5/5.12/include/QtWidgets/qrubberband.h \
+		/opt/qt5/5.12/include/QtWidgets/qframe.h \
+		/opt/qt5/5.12/include/QtCore/qabstractitemmodel.h \
 		/opt/qt5/5.12/include/QtCore/QTimer \
 		/opt/qt5/5.12/include/QtCore/qtimer.h \
 		/opt/qt5/5.12/include/QtCore/qbasictimer.h \
@@ -1032,13 +1067,64 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		/opt/qt5/5.12/include/QtSerialPort/QSerialPort \
 		/opt/qt5/5.12/include/QtSerialPort/qserialport.h \
 		/opt/qt5/5.12/include/QtSerialPort/qserialportglobal.h \
+		/opt/qt5/5.12/include/QtSerialPort/QSerialPortInfo \
+		/opt/qt5/5.12/include/QtSerialPort/qserialportinfo.h \
 		/opt/qt5/5.12/include/QtWidgets/QMessageBox \
 		/opt/qt5/5.12/include/QtWidgets/qmessagebox.h \
 		/opt/qt5/5.12/include/QtWidgets/qdialog.h \
+		/opt/qt5/5.12/include/QtWidgets/QComboBox \
+		/opt/qt5/5.12/include/QtWidgets/qcombobox.h \
+		/opt/qt5/5.12/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/qt5/5.12/include/QtWidgets/qstyleoption.h \
+		/opt/qt5/5.12/include/QtWidgets/qabstractspinbox.h \
+		/opt/qt5/5.12/include/QtGui/qvalidator.h \
+		/opt/qt5/5.12/include/QtCore/qregularexpression.h \
+		/opt/qt5/5.12/include/QtWidgets/qslider.h \
+		/opt/qt5/5.12/include/QtWidgets/qabstractslider.h \
+		/opt/qt5/5.12/include/QtWidgets/qstyle.h \
+		/opt/qt5/5.12/include/QtWidgets/qtabbar.h \
+		/opt/qt5/5.12/include/QtWidgets/qrubberband.h \
+		/opt/qt5/5.12/include/QtWidgets/qframe.h \
+		/opt/qt5/5.12/include/QtCore/qabstractitemmodel.h \
 		/opt/qt5/5.12/include/QtCore/QTimer \
 		/opt/qt5/5.12/include/QtCore/qtimer.h \
 		/opt/qt5/5.12/include/QtCore/qbasictimer.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		/opt/qt5/5.12/include/QtCore/QVariant \
+		/opt/qt5/5.12/include/QtWidgets/QApplication \
+		/opt/qt5/5.12/include/QtWidgets/qapplication.h \
+		/opt/qt5/5.12/include/QtCore/qcoreapplication.h \
+		/opt/qt5/5.12/include/QtCore/qeventloop.h \
+		/opt/qt5/5.12/include/QtWidgets/qdesktopwidget.h \
+		/opt/qt5/5.12/include/QtGui/qguiapplication.h \
+		/opt/qt5/5.12/include/QtGui/qinputmethod.h \
+		/opt/qt5/5.12/include/QtWidgets/QGridLayout \
+		/opt/qt5/5.12/include/QtWidgets/qgridlayout.h \
+		/opt/qt5/5.12/include/QtWidgets/qlayout.h \
+		/opt/qt5/5.12/include/QtWidgets/qlayoutitem.h \
+		/opt/qt5/5.12/include/QtWidgets/qboxlayout.h \
+		/opt/qt5/5.12/include/QtWidgets/QGroupBox \
+		/opt/qt5/5.12/include/QtWidgets/qgroupbox.h \
+		/opt/qt5/5.12/include/QtWidgets/QLabel \
+		/opt/qt5/5.12/include/QtWidgets/qlabel.h \
+		/opt/qt5/5.12/include/QtWidgets/QPushButton \
+		/opt/qt5/5.12/include/QtWidgets/qpushbutton.h \
+		/opt/qt5/5.12/include/QtWidgets/qabstractbutton.h \
+		/opt/qt5/5.12/include/QtWidgets/QSpinBox \
+		/opt/qt5/5.12/include/QtWidgets/qspinbox.h \
+		/opt/qt5/5.12/include/QtWidgets/QStatusBar \
+		/opt/qt5/5.12/include/QtWidgets/qstatusbar.h \
+		/opt/qt5/5.12/include/QtWidgets/QTextBrowser \
+		/opt/qt5/5.12/include/QtWidgets/qtextbrowser.h \
+		/opt/qt5/5.12/include/QtWidgets/qtextedit.h \
+		/opt/qt5/5.12/include/QtWidgets/qabstractscrollarea.h \
+		/opt/qt5/5.12/include/QtGui/qtextdocument.h \
+		/opt/qt5/5.12/include/QtGui/qtextoption.h \
+		/opt/qt5/5.12/include/QtGui/qtextcursor.h \
+		/opt/qt5/5.12/include/QtGui/qtextformat.h \
+		/opt/qt5/5.12/include/QtGui/qpen.h \
+		/opt/qt5/5.12/include/QtWidgets/QWidget \
+		/opt/qt5/5.12/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
