@@ -787,6 +787,8 @@ moc_mainwindow.cpp: /opt/qt5/5.12/include/QtWidgets/QMainWindow \
 		/opt/qt5/5.12/include/QtWidgets/qrubberband.h \
 		/opt/qt5/5.12/include/QtWidgets/qframe.h \
 		/opt/qt5/5.12/include/QtCore/qabstractitemmodel.h \
+		/opt/qt5/5.12/include/QtCore/QTime \
+		/opt/qt5/5.12/include/QtCore/qdatetime.h \
 		/opt/qt5/5.12/include/QtCore/QTimer \
 		/opt/qt5/5.12/include/QtCore/qtimer.h \
 		/opt/qt5/5.12/include/QtCore/qbasictimer.h \
@@ -945,6 +947,8 @@ main.o: main.cpp mainwindow.h \
 		/opt/qt5/5.12/include/QtWidgets/qrubberband.h \
 		/opt/qt5/5.12/include/QtWidgets/qframe.h \
 		/opt/qt5/5.12/include/QtCore/qabstractitemmodel.h \
+		/opt/qt5/5.12/include/QtCore/QTime \
+		/opt/qt5/5.12/include/QtCore/qdatetime.h \
 		/opt/qt5/5.12/include/QtCore/QTimer \
 		/opt/qt5/5.12/include/QtCore/qtimer.h \
 		/opt/qt5/5.12/include/QtCore/qbasictimer.h \
@@ -1086,44 +1090,12 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		/opt/qt5/5.12/include/QtWidgets/qrubberband.h \
 		/opt/qt5/5.12/include/QtWidgets/qframe.h \
 		/opt/qt5/5.12/include/QtCore/qabstractitemmodel.h \
+		/opt/qt5/5.12/include/QtCore/QTime \
+		/opt/qt5/5.12/include/QtCore/qdatetime.h \
 		/opt/qt5/5.12/include/QtCore/QTimer \
 		/opt/qt5/5.12/include/QtCore/qtimer.h \
 		/opt/qt5/5.12/include/QtCore/qbasictimer.h \
 		ui_mainwindow.h \
-		/opt/qt5/5.12/include/QtCore/QVariant \
-		/opt/qt5/5.12/include/QtWidgets/QApplication \
-		/opt/qt5/5.12/include/QtWidgets/qapplication.h \
-		/opt/qt5/5.12/include/QtCore/qcoreapplication.h \
-		/opt/qt5/5.12/include/QtCore/qeventloop.h \
-		/opt/qt5/5.12/include/QtWidgets/qdesktopwidget.h \
-		/opt/qt5/5.12/include/QtGui/qguiapplication.h \
-		/opt/qt5/5.12/include/QtGui/qinputmethod.h \
-		/opt/qt5/5.12/include/QtWidgets/QGridLayout \
-		/opt/qt5/5.12/include/QtWidgets/qgridlayout.h \
-		/opt/qt5/5.12/include/QtWidgets/qlayout.h \
-		/opt/qt5/5.12/include/QtWidgets/qlayoutitem.h \
-		/opt/qt5/5.12/include/QtWidgets/qboxlayout.h \
-		/opt/qt5/5.12/include/QtWidgets/QGroupBox \
-		/opt/qt5/5.12/include/QtWidgets/qgroupbox.h \
-		/opt/qt5/5.12/include/QtWidgets/QLabel \
-		/opt/qt5/5.12/include/QtWidgets/qlabel.h \
-		/opt/qt5/5.12/include/QtWidgets/QPushButton \
-		/opt/qt5/5.12/include/QtWidgets/qpushbutton.h \
-		/opt/qt5/5.12/include/QtWidgets/qabstractbutton.h \
-		/opt/qt5/5.12/include/QtWidgets/QSpinBox \
-		/opt/qt5/5.12/include/QtWidgets/qspinbox.h \
-		/opt/qt5/5.12/include/QtWidgets/QStatusBar \
-		/opt/qt5/5.12/include/QtWidgets/qstatusbar.h \
-		/opt/qt5/5.12/include/QtWidgets/QTextBrowser \
-		/opt/qt5/5.12/include/QtWidgets/qtextbrowser.h \
-		/opt/qt5/5.12/include/QtWidgets/qtextedit.h \
-		/opt/qt5/5.12/include/QtWidgets/qabstractscrollarea.h \
-		/opt/qt5/5.12/include/QtGui/qtextdocument.h \
-		/opt/qt5/5.12/include/QtGui/qtextoption.h \
-		/opt/qt5/5.12/include/QtGui/qtextcursor.h \
-		/opt/qt5/5.12/include/QtGui/qtextformat.h \
-		/opt/qt5/5.12/include/QtGui/qpen.h \
-		/opt/qt5/5.12/include/QtWidgets/QWidget \
 		/opt/qt5/5.12/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 

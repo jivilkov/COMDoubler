@@ -7,6 +7,7 @@
 #include <QSerialPortInfo>
 #include <QMessageBox>
 #include <QComboBox>
+#include <QTime>
 #include <QTimer>
 
 namespace Ui {
@@ -23,9 +24,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QTimer *timerDoubler;
-    QTimer *timerRequest;
-
+    QTimer *timerSend;
     QSerialPort *portIN;
     QSerialPort *portOUT;
 
@@ -35,11 +34,21 @@ private:
     void setParityList(QComboBox *cbox);
     void setStopBitsList(QComboBox *cbox);
     void setFlowControlList(QComboBox *cbox);
+    void setLog(QString text);
+    void disableSettings(qint8 nport, bool status);
+    void writePort(QSerialPort *port, QByteArray data);
+
+    QByteArray dataIN;
+    QByteArray dataOUT;
 
 private slots:
-    void readByte();
+    void readData();
+    void timerSendSlot();
     void on_buttonIN_clicked();
-    void on_button_OUT_clicked();
+    void on_buttonOUT_clicked();
+    void on_buttonSend_clicked();
+    void on_buttonStop_clicked();
+    void on_clearBufferButton_clicked();
 };
 
 #endif // MAINWINDOW_H
